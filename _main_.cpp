@@ -1,23 +1,9 @@
 #include <iostream>
 #include <vector>
-
-#define J 10
-#define Q 10
-#define K 10
+#include <string>
+#include <time.h>
 
 using namespace std;
-
-bool YorN(){
-    cout << ""
-    while(1){
-        if(c == 'Y' || c == 'y')
-            return true;
-        else if(c == 'N' || c == 'n')
-            return false;
-        else
-            cout << "다시 입력해주세요." << endl;
-        }
-}
 
 class Card{
     int cardNum(int n){
@@ -35,7 +21,7 @@ class Card{
             case 'K':
                 return 10;
             case 'A':
-                return 
+                return 10;
         }
     }
     
