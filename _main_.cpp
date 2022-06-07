@@ -1,51 +1,82 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <time.h>
 
 using namespace std;
 
 class Card{
-    int cardNum(int n){
-        if( n >= 2 && n <= 10)
-            return n;
-        else
-            return 0;
-    }
-    int cardNum(char n){
-        switch(n){
-            case 'J':
-                return 10;
-            case 'Q':
-                return 10;
-            case 'K':
-                return 10;
-            case 'A':
-                return 10;
-        }
-    }
-    
-
-};
-
-class Gamer{
 private:
-    vector<int> deck;
-    int sum;
+    string pattern;
+    string denomination;
 public:
-
+    Card(string _pattern, string _denomination);
+    string getPattern();
+    void setPattern(string _pattern);
+    string getDenomination();
+    void setDenomination(string _denomination);
 };
 
-class Player: Gamer{
+class CardDeck{
 private:
-    string name;
+    vector<Card> cards;
+    const vector<string> PATTERNS;
+    const int CARD_COUNT;
+    vector<Card> generateCards();
+public:
+    CardDeck();
+    Card getCards();
+    Card draw();
 };
 
-class Dealer: Gamer{
-    
+class Player{
+private:
+    vector<Card> cards;
+    bool turn;
+    const string NAME;
+
+public:
+    Player();
+    void receiveCard(Card _card);
+    vector<Card> openCards();
+    void showCards();
+    void turnOff();
+    void turnOn();
+    bool isTurn();
+    string getName();
+    void setTurn(bool _turn);
+    int getPointSum();
 };
 
-// 상속, 다형성, 캡슐화, 추상화
+class Dealer: public Player{
+private:
+    const int CAN_RECEIVE_POINT;
+    bool isReceiveCard();
+
+public:
+    Dealer();
+};
+
+class Gamer: public Player{
+public:
+    Gamer(string _name);
+};
+
+class Rule{
+public:
+    int getScore(vector<Card> _cards);
+    Player getWinner(vector<Player> players);
+};
+
+class Game{
+private:
+    const int INIT_RECEIVE_CARD_COUNT;
+    const string STOP_RECEIVE_CARD;
+    vector<Player> playingPhase(CardDeck cardDeck, vector<Player> players);
+    bool isAllPlayerTurnOff(vector<Player> players);
+    bool isReceiveCard();
+    vector<Player> initPhase(CardDeck cardDeck, vector<Player> players);
+};
+
 int main(){
     return 0;
 }
