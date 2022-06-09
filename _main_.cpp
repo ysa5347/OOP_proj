@@ -2,12 +2,15 @@
 #include <vector>
 #include <string>
 
+#include "UI.h"
+
 using namespace std;
 
 class Card{
 private:
     string pattern;
     string denomination;
+
 public:
     Card(string _pattern, string _denomination);
     string getPattern();
@@ -22,6 +25,7 @@ private:
     const vector<string> PATTERNS;
     const int CARD_COUNT;
     vector<Card> generateCards();
+
 public:
     CardDeck();
     Card getCards();
@@ -45,6 +49,7 @@ public:
     string getName();
     void setTurn(bool _turn);
     int getPointSum();
+
 };
 
 class Dealer: public Player{
@@ -54,17 +59,20 @@ private:
 
 public:
     Dealer();
+
 };
 
 class Gamer: public Player{
 public:
     Gamer(string _name);
+
 };
 
 class Rule{
 public:
     int getScore(vector<Card> _cards);
     Player getWinner(vector<Player> players);
+
 };
 
 class Game{
@@ -75,8 +83,14 @@ private:
     bool isAllPlayerTurnOff(vector<Player> players);
     bool isReceiveCard();
     vector<Player> initPhase(CardDeck cardDeck, vector<Player> players);
+
+public:
+    Game();
+
 };
 
+
 int main(){
+    
     return 0;
 }
