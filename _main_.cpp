@@ -3,7 +3,7 @@
 #include <string>
 
 #include "UI.h"
-
+#include "Card.h"
 using namespace std;
 
 class Card{
@@ -18,7 +18,7 @@ public:
     string getDenomination();
     void setDenomination(string _denomination);
 };
-//ssssssss
+//sss
 class CardDeck{
 private:
     vector<Card> cards;
