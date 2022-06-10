@@ -3,7 +3,7 @@
 #include <string>
 
 #include "UI.h"
-
+#include "Rule.h"
 using namespace std;
 
 class Card{
@@ -65,13 +65,6 @@ public:
 class Gamer: public Player{
 public:
     Gamer(string _name);
-
-};
-
-class Rule{
-public:
-    int getScore(vector<Card> _cards);
-    Player getWinner(vector<Player> players);
 
 };
 
