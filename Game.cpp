@@ -1,6 +1,8 @@
-#include "Game.h"
 #include <iostream>
 #include <iomanip>
+
+#include "Game.hpp"
+
 using namespace std;
 
 Game::Game():INIT_RECEIVE_CARD_COUNT(2), STOP_RECEIVE_CARD("0"){

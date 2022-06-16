@@ -1,3 +1,7 @@
+#include <iostream>
+
+#include "Rule.hpp"
+
 int Rule::getScore(vector<Card> _cards){
     
 }

@@ -2,6 +2,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include "Card.hpp"
+
 using namespace std;
 
 class Card

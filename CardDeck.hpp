@@ -1,7 +1,7 @@
 #ifndef CARDDECK_H
 #define CARDDECK_H
 
-#include "Card.h"
+#include "Card.hpp"
 
 using namespace std;
 

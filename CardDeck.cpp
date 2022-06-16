@@ -2,7 +2,10 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "Card.h"
+
+#include "Card.hpp"
+#include "CardDeck.hpp"
+
 using namespace std;
 
 class CardDeck {

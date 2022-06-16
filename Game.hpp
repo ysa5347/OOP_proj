@@ -1,8 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "CardDeck.h"
-#include "Player.h"
+#include "CardDeck.hpp"
+#include "Player.hpp"
 
 using namespace std;
 
