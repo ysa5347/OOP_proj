@@ -1,6 +1,10 @@
 #ifndef CARDDECK_H
 #define CARDDECK_H
 
+#include <iostream>
+#include <vector>
+#include <string>
+
 #include "Card.hpp"
 
 using namespace std;

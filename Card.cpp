@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -71,9 +70,9 @@ public:
     static const Denomination QUEEN;
     static const Denomination KING;
 
-    vector <Denomination> values = { ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, SEIGHT, NINE, TEN, JACK, QUEEN, KING };
+    vector <Denomination> values = { ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING };
 
-    Denomination(striing mark, int point)
+    Denomination(string mark, int point)
     {
         this->mark = mark;
         this->point = point;

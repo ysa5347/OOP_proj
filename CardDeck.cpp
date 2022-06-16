@@ -1,9 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
 
-#include "Card.hpp"
 #include "CardDeck.hpp"
 
 using namespace std;
