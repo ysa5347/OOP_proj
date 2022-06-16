@@ -11,6 +11,9 @@ class UserInterface{
 public:
     void initMsg();
     vector<string> getUserName();
+    void welcomeMsg();
+    void shuffling();
+    void startMsg();
 };
 
 #endif

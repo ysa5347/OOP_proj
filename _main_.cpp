@@ -10,11 +10,12 @@
 #include "Player.hpp"
 
 using namespace std;
+using namespace Game;
 
 int main(){
     UserInterface UI;
     vector<Gamer> gamers;
-    Game game1;
+    Rule rule;
     
     UI.initMsg();
     vector<string> names = UI.getUserName();
@@ -24,7 +25,24 @@ int main(){
         Gamer tempGamer(tempName);
         gamers.push_back(tempGamer);
     }
+    UI.welcomeMsg();
 
-
+    // 덱을 섞는 중입니다...
+    CardDeck gameDeck;          
+    UI.shuffling();
+    
+    // 딜러 배정 및 플레이어 편입
+    vector<Player*> players;    
+    Dealer dealer;
+    players.push_back(&dealer);
+    for(int i = 0; i < 3; i++){
+        players.push_back(&gamers[i]);
+    }
+    
+    // 게임 시작
+    UI.startMsg();
+    Game::initPhase(&gameDeck, players);
+    Game::hitPhase(&gameDeck, players);
+    
     return 0;
 }
